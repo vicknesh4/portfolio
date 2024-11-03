@@ -1,0 +1,161 @@
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease; 
+}
+
+.skill-item:hover {
+  transform: scale(1.1); 
+}
+
+.skills-description {
+  color: #666666;
+  line-height: 1.6;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.skill-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.category-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+
+  .skill-logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skills-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .skill-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skills-description {
+    font-size: 1.1rem;
+  }
+
+  .category-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .skill-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skills-description {
+    font-size: 1rem;
+  }
+
+  .category-title {
+    font-size: 1rem;
+  }
+
+  .skill-name {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 0.6rem;
+  }
+
+  .skill-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skills-description {
+    font-size: 0.9rem;
+  }
+
+  .category-title {
+    font-size: 0.9rem;
+  }
+
+  .skill-name {
+    font-size: 0.6rem;
+  }
+
+  .skill-category {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .skill-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skills-description {
+    font-size: 0.8rem;
+  }
+
+  .category-title {
+    font-size: 0.8rem;
+  }
+
+  .skill-name {
+    font-size: 0.5rem;
+  }
+
+  .skill-category {
+    margin-bottom: 1rem;
+  }
+}
