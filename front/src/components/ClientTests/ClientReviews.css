@@ -1,7 +1,6 @@
 .section.client-reviews {
   background-color: #f8f9fa;
   padding: 4rem 0;
-  min-height: calc(100vh - 80px);
 }
 
 .container {
@@ -11,12 +10,11 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   color: #333;
   text-align: center;
   margin-bottom: 2rem;
 }
-
 
 .review-form {
   background-color: #fff;
@@ -48,7 +46,7 @@
 }
 
 .star {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   color: #ddd;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -77,7 +75,7 @@
 
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -113,10 +111,19 @@
   line-height: 1.6;
 }
 
+@media (max-width: 992px) {
+  .section.client-reviews {
+    padding: 3.5rem 0;
+  }
+
+  .review-form {
+    padding: 1.75rem;
+  }
+}
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
+  .section.client-reviews {
+    padding: 3rem 0;
   }
 
   .review-form {
@@ -124,20 +131,32 @@
   }
 
   .reviews-grid {
-    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 1.75rem;
+  .section.client-reviews {
+    padding: 2.5rem 0;
   }
 
   .review-form {
-    padding: 1rem;
+    padding: 1.25rem;
   }
 
-  .star {
-    font-size: 1.5rem;
+  .reviews-grid {
+    gap: 1.25rem;
+  }
+
+  .review-card {
+    padding: 1.25rem;
+  }
+
+  .client-name {
+    font-size: 1.1rem;
+  }
+
+  .client-rating .star {
+    font-size: 1rem;
   }
 }
